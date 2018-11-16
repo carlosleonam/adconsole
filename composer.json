@@ -13,13 +13,18 @@
     "email": "team@indev.net.br"
   },
 
+
+
+
     "minimum-stability": "stable",
     "prefer-stable": true,
 
     "autoload": {
         "psr-4": {
             "App\\Command\\": "src/",
-             "Indev\\AdConsole\\Test\\": "test/"
+             "Indev\\AdConsole\\Test\\": "test/",
+              "Indev\\Command\\Bin\\": "bin/"
+
         }
     },
     "require-dev": {
