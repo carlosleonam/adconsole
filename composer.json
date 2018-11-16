@@ -2,7 +2,7 @@
     "name": "indev/adcconsole",
     "description": "Console for Adianti Framework Community Edition",
     "type": "library",
-    "license": "GNU General Public License v3.0",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "Alexandre Souza",
