@@ -6,16 +6,9 @@ Foco do nosso projeto é facilitar a criação de codigos que são rotineiros,
 como models, listagens , formularios entre outros
 
 ## Instalação
-adcione em seu composer.json
-```
-"indev/adcconsole": "dev-master"
 
-```
-em seguida execute
+composer require indev/adcconsole:dev-master
 
-```
-composer update --no-dev
-```
 ## Implementaçõe
 
 ### Models
