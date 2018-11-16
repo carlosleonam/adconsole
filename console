@@ -1,0 +1,21 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Indev
+ * Date: 16/11/18
+ * Time: 09:40
+ */
+
+require __DIR__ . '/vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use App\Command\CreateModelsCommand;
+
+$application = new Application();
+
+// ... register commands
+$application->addCommands([
+    new CreateModelsCommand()
+]);
+
+$application->run();
