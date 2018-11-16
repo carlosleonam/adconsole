@@ -101,12 +101,12 @@ if(!empty($assosiacao)) {
         $assosiacao = is_array($assosiacao) ? $assosiacao : explode(',', $assosiacao);
         $lines .= $this->addAttribute($assosiacao, 'id');
         foreach ($assosiacao as $ass) {
-            $asslines .= "private $ass; \n\t";
+            $asslines .= "private $".$ass."; \n\t";
 
         }
 
     } else {
-        $asslines .= "private $assosiacao; \n\t";
+        $asslines .= "private $".$assosiacao."; \n\t";
         $lines .= $this->addAttribute($assosiacao, 'id');
     }
 
@@ -147,12 +147,14 @@ if(!empty($assosiacao)) {
                 $composition = is_array($composition) ? $composition : explode(',', $composition);
 
                 foreach ($composition as $ass) {
-                    $asslines .= "private $ass; \n\t";
+
+                     $asslines .= "private $".$ass."; \n\t";
 
                 }
 
             } else {
-                $asslines .= "private $composition; \n\t";
+               
+                 $asslines .= "private $".$composition."; \n\t";
 
             }
 
@@ -225,12 +227,14 @@ if(!empty($assosiacao)) {
                 $aggregate = is_array($aggregate) ? $aggregate : explode(',', $aggregate);
 
                 foreach ($aggregate as $ass) {
-                    $asslines .= "private $ass; \n\t";
+                     $asslines .= "private $".$ass."; \n\t";
+                  
 
                 }
 
             } else {
-                $asslines .= "private $aggregate; \n\t";
+                 $asslines .= "private $".$aggregate."; \n\t";
+             
 
             }
 
