@@ -6,8 +6,13 @@
  * Time: 09:40
  */
 
+if(file_exists(__DIR__ . '/vendor/autoload.php')){
 require __DIR__ . '/vendor/autoload.php';
-
+}
+else{
+	$patch = dirname( __FILE__,2);
+	require patch . '/vendor/autoload.php';
+}
 use Symfony\Component\Console\Application;
 use App\Command\CreateModelsCommand;
 
