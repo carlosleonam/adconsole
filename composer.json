@@ -9,7 +9,11 @@
             "email": "alexandre@indev.net.br"
         }
     ],
-    "minimum-stability": "dev",
+      "support": {
+    "email": "team@indev.net.br"
+  },
+
+    "minimum-stability": "stable",
     "prefer-stable": true,
 
     "autoload": {
@@ -23,6 +27,6 @@
         "symfony/phpunit-bridge": "*"
     },
     "require": {
-        "symfony/console": "^4.2@dev"
+        "symfony/console": "^4.2"
     }
 }
