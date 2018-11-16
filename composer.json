@@ -27,6 +27,6 @@
         "symfony/phpunit-bridge": "*"
     },
     "require": {
-        "symfony/console": "^4.2"
+        "symfony/console": "^4.1"
     }
 }
