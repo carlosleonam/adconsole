@@ -11,7 +11,7 @@ namespace App\Command;
 
 use Symfony\Component\Console\Application;
 use Phinx\Console\Command;
-
+use App\Command\CreateModelsCommand;
 
 class PhinxConsole extends Application
 {
@@ -36,6 +36,7 @@ class PhinxConsole extends Application
             new Command\Test(),
             new Command\SeedCreate(),
             new Command\SeedRun(),
+            new CreateModelsCommand()
         ]);
 
     }

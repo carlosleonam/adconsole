@@ -1,13 +1,11 @@
+#!/usr/bin/env php
 <?php
-/**
- * Created by PhpStorm.
- * User: Indev
- * Date: 16/11/18
- * Time: 09:40
- */
 
- require_once "vendor/autoload.php"; // vindo da raiz do projeto.
-
+if(!file_exists('vendor/autoload.php')){
+    require_once dirname(__FILE__,4)."/autoload.php"; // vindo da raiz do projeto.
+}else {
+    require_once "vendor/autoload.php"; // vindo da raiz do projeto.
+}
 
 use App\Command\PhinxConsole;
 use App\Command\CreateModelsCommand;
