@@ -16,5 +16,16 @@ composer require indev/adcconsole:dev-master
 - [x] models composição
 - [x] models agregaçnao
 - [ ] migration 
+- [ ] gerar model de tabela existente
 
+### Controllers
+- [ ] Form
+- [ ] QuickForm
+- [ ] BootstrapFormBuilder
+- [ ] StandartForm
 
+### Grids
+- [ ] Grid
+- [ ] QuickGrid
+- [ ] BootstrapDatagrid
+- [ ] StandardGrid
