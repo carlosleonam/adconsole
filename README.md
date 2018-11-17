@@ -15,5 +15,6 @@ composer require indev/adcconsole:dev-master
 - [x] models associação
 - [x] models composição
 - [x] models agregaçnao
+- [ ] migration 
 
 
