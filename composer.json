@@ -3,6 +3,7 @@
     "description": "Console for Adianti Framework Community Edition",
     "type": "library",
     "license": "Apache-2.0",
+    "version": "0.2",
     "authors": [
         {
             "name": "Alexandre Souza",
@@ -13,7 +14,11 @@
     "email": "team@indev.net.br"
   },
 
-
+  "scripts": {
+    "post-install-cmd": [
+      "php -r \"copy('bin/console', 'vendor/bin/adconsole');\""
+      ]
+  },
 
 
     "minimum-stability": "stable",
@@ -32,6 +37,8 @@
         "symfony/phpunit-bridge": "*"
     },
     "require": {
-        "symfony/console": "^4.1"
-    }
+        "symfony/console": "^4.1",
+        "robmorgan/phinx": "^0.10.6"
+    },
+  "bin": ["bin/adconsole"]
 }
