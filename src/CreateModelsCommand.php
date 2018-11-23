@@ -61,9 +61,6 @@ class CreateModelsCommand extends Command
             $this->createRestService($name,$output);
         }
 
-
-            $this->getFeilds($name);
-
         $pivot = (empty($pivot)?ucfirst($name).ucfirst($aggregate):$pivot);
 
         $key = (empty($key)?'id':$key);
