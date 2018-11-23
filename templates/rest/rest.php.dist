@@ -17,7 +17,7 @@ class HRestServer
 
     public function __construct()
     {
-        $ini = parse_ini_file('app/config/application.ini', true);
+        $ini = parse_ini_file('app/config/adconfig.ini', true);
         $this->secret = $ini['rest']['secret'];
         $this->database = $ini['rest']['database'];
         $this->issuer = $ini['rest']['issuer'];

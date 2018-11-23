@@ -6,7 +6,7 @@ return
     [
         'paths' => [
             'migrations' => 'app/database/db/migrations',
-            'seeds' => 'app/database//db/seeds'
+            'seeds' => 'app/database/db/seeds'
         ],
         'environments' => [
             'default_migration_table' => 'phinxlog',
