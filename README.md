@@ -16,7 +16,6 @@ composer require indev/adcconsole:dev-master
 - [x] models composição
 - [x] models agregaçnao
 - [x] migration 
-- [ ] gerar model de tabela existente
 
 ### Controllers
 - [ ] Form
