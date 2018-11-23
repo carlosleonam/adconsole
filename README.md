@@ -22,7 +22,7 @@ composer require indev/adcconsole:dev-master
 - [x] rest com jwt 
 
 ### Service 
-- [ ] gerar service 
+- [x] gerar service 
 
 ### Controllers
 - [ ] Form
