@@ -16,6 +16,13 @@ composer require indev/adcconsole:dev-master
 - [x] models composição
 - [x] models agregaçnao
 - [x] migration 
+- [x] gerar service  com model
+
+### Rest
+- [x] rest com jwt 
+
+### Service 
+- [ ] gerar service 
 
 ### Controllers
 - [ ] Form
