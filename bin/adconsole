@@ -14,9 +14,5 @@ use App\Command\CreateModelsCommand;
 
 $application = new PhinxConsole();
 
-// ... register commands
-$application->addCommands([
-    new CreateModelsCommand()
-]);
 
 $application->run();

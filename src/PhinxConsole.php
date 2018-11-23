@@ -13,6 +13,7 @@ use Symfony\Component\Console\Application;
 use Phinx\Console\Command;
 use App\Command\CreateModelsCommand;
 
+
 class PhinxConsole extends Application
 {
 
@@ -27,16 +28,16 @@ class PhinxConsole extends Application
 
         parent::__construct('Phinx  - https://phinx.org.', $version);
         $this->addCommands([
-            new Command\Init(),
-            new Command\Create(),
-            new Command\Migrate(),
-            new Command\Rollback(),
-            new Command\Status(),
-            new Command\Breakpoint(),
-            new Command\Test(),
-            new Command\SeedCreate(),
-            new Command\SeedRun(),
-            new CreateModelsCommand()
+            new Init(),
+            new Create(),
+            new Migrate(),
+            new Rollback(),
+            new Status(),
+            new Breakpoint(),
+            new Test(),
+            new SeedCreate(),
+            new SeedRun(),
+            new CreateModelsCommand(),
         ]);
 
     }
