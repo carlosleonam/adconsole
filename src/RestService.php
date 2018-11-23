@@ -11,7 +11,8 @@ namespace App\Command;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-
+use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputOption;
 class RestService extends Command
 {
 
@@ -19,51 +20,44 @@ class RestService extends Command
     {
         $this
             // the name of the command (the part after "bin/console")
-            ->setName('rest:install')
+            ->setName('rest:service:create')
+            ->addArgument('name',null,'Name for Service')
+            ->addOption('model','m',InputOption::VALUE_OPTIONAL,'ACTIVE_RECORD used in service ')
+            ->addOption('database','d',InputOption::VALUE_OPTIONAL,'DataBase used in service ','adconfig')
+
             // the short description shown while running "php bin/console list"
-            ->setDescription('install rest with JWT auth')
+            ->setDescription('generate service class')
             // the full command description shown when running the command with
             // the "--help" option
-            ->setHelp('This command allows you to install rest with JWT auth');
+            ->setHelp('This command you can generate service class');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
 
-        if (!file_exists('rest.php')) {
-            $contents = file_get_contents(dirname(__FILE__, 2) . '/templates/rest/rest.php.dist');
+        $name = $input->getArgument('name');
+        $model = $input->getOption('model');
+        $database = $input->getOption('database');
 
-            if (file_put_contents('rest.php', $contents) === false) {
+        if(empty($model))
+            $model= ucfirst($name);
+
+        if (!file_exists('app/service/' . $name . '.class.php')) {
+            $contents = file_get_contents(dirname(__FILE__, 2) . '/templates/rest/service.php.dist');
+
+            $contents = str_replace('$class',$name.'Service',$contents);
+            $contents = str_replace('$model',$model,$contents);
+            $contents = str_replace('$database',$database,$contents);
+
+
+            if (file_put_contents('app/service/' . $name . '.class.php', $contents) === false) {
                 throw new RuntimeException(sprintf(
                     'The file "%s"  already exists',
-                    'rest.php'
+                    'app/service/' . $name . 'class.php'
                 ));
             }
 
-            if (!file_exists('app/config/adconfig.ini')) {
-                $contents = file_get_contents(dirname(__FILE__, 2) . '/templates/adconfig.ini.dist');
-                $contents .= file_get_contents(dirname(__FILE__, 2) . '/templates/rest/rest.ini.dist');
-                if (file_put_contents('app/config/adconfig.ini', $contents) === false) {
-                    throw new RuntimeException(sprintf(
-                        'The file "%s" could not be written to',
-                        'app/config/adconfig.ini'
-                    ));
-                }
-
-                $output->writeln("<info>created</info> app/config/adconfig.ini");
-            } else {
-                $contents = file_get_contents('app/config/adconfig.ini');
-                $contents .= file_get_contents(dirname(__FILE__, 2) . '/templates/rest/rest.ini.dist');
-                if (file_put_contents('app/config/adconfig.ini', $contents) === false) {
-                    throw new RuntimeException(sprintf(
-                        'The file "%s" could not be written to',
-                        'app/config/adconfig.ini'
-                    ));
-                }
-            }
-
-
-            $output->writeln("<info>created</info> rest.php");
+            $output->writeln("<info>created</info> app/service/{$name}.class.php'");
         }
 
 

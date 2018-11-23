@@ -458,19 +458,15 @@ private function strCharFind($needle,$haystack){
 
     private function createRestService($name,OutputInterface $output)
     {
-        $contents =  Config::fromPhp('app/config/migration.php');
-
-        $dev =  $contents->getDefaultEnvironment();
-
-        $dados =  $contents->getEnvironment($dev);
 
 
-        if (!file_exists('app/service/' . $name . 'class.php')) {
+
+        if (!file_exists('app/service/' . $name . '.class.php')) {
             $contents = file_get_contents(dirname(__FILE__, 2) . '/templates/rest/service.php.dist');
 
             $contents = str_replace('$class',$name.'Service',$contents);
             $contents = str_replace('$model',$name,$contents);
-            $contents = str_replace('$model',$dados['name'],$contents);
+            $contents = str_replace('$database','adconfig',$contents);
 
 
             if (file_put_contents('app/service/' . $name . 'class.php', $contents) === false) {
