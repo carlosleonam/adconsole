@@ -3,7 +3,7 @@
     "description": "Console for Adianti Framework Community Edition",
     "type": "library",
     "license": "Apache-2.0",
-    "version": "0.2",
+    "version": "0.0.4",
     "authors": [
         {
             "name": "Alexandre Souza",
@@ -13,22 +13,13 @@
       "support": {
     "email": "team@indev.net.br"
   },
-
-  "scripts": {
-    "post-install-cmd": [
-      "php -r \"copy('bin/console', 'vendor/bin/adconsole');\""
-      ]
-  },
-
-
-    "minimum-stability": "stable",
-    "prefer-stable": true,
+    "minimum-stability": "stable"
 
     "autoload": {
         "psr-4": {
-            "App\\Command\\": "src/",
+             "App\\Command\\": "src/",
              "Indev\\AdConsole\\Test\\": "test/",
-              "Indev\\Command\\Bin\\": "bin/"
+             "Indev\\Command\\Bin\\": "bin/"
 
         }
     },
