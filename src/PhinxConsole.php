@@ -38,6 +38,7 @@ class PhinxConsole extends Application
             new SeedCreate(),
             new SeedRun(),
             new CreateModelsCommand(),
+            new Rest()
         ]);
 
     }

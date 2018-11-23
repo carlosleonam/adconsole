@@ -36,6 +36,7 @@ class CreateModelsCommand extends Command
             ->addOption('pivot',null,InputOption::VALUE_OPTIONAL,'pivot record')
             ->addOption('idpolicy','i',InputOption::VALUE_OPTIONAL,'IDPOLICY')
             ->addOption('patch',null,InputOption::VALUE_OPTIONAL,'patch for model')
+            ->addOption('rest','r',InputOption::VALUE_OPTIONAL,'çreate rest service')
 
             // the full command description shown when running the command with
             // the "--help" option
@@ -54,6 +55,11 @@ class CreateModelsCommand extends Command
         $composition =  $input->getOption('composition');
         $aggregate = $input->getOption('aggregate');
         $pivot = $input->getOption('pivot');
+        $rest = $input->getOption('rest');
+
+        if(!empty($rest)){
+            $this->createRestService($name,$output);
+        }
 
 
             $this->getFeilds($name);
@@ -451,6 +457,36 @@ private function strCharFind($needle,$haystack){
             }
         }
         return $return;
+    }
+
+    private function createRestService($name,OutputInterface $output)
+    {
+        $contents =  Config::fromPhp('app/config/migration.php');
+
+        $dev =  $contents->getDefaultEnvironment();
+
+        $dados =  $contents->getEnvironment($dev);
+
+
+        if (!file_exists('app/service/' . $name . 'class.php')) {
+            $contents = file_get_contents(dirname(__FILE__, 2) . '/templates/rest/service.php.dist');
+
+            $contents = str_replace('$class',$name.'Service',$contents);
+            $contents = str_replace('$model',$name,$contents);
+            $contents = str_replace('$model',$dados['name'],$contents);
+
+
+            if (file_put_contents('app/service/' . $name . 'class.php', $contents) === false) {
+                throw new RuntimeException(sprintf(
+                    'The file "%s"  already exists',
+                    'app/service/' . $name . 'class.php'
+                ));
+            }
+
+            $output->writeln("<info>created</info> 'app/service/' . $name . 'class.php'");
+        }
+
+
     }
 
     private function getConn(){

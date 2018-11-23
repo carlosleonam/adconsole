@@ -13,7 +13,5 @@ o padrão é ser na raiz do projeto ou pode usar o -c para dizer onde esta a con
 
 
 ```
-mkdir -p db/migrations db/seeds
-
-php vendor/adconsole init -f php  /app/config/
+php vendor/adconsole init 
 ```

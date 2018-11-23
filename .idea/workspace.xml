@@ -2,8 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="286fd73f-0d6c-426e-983a-6779fa5a9df2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Create.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Migrate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Rest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RestService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/adconfig.ini.dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/rest/rest.ini.dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/rest/rest.php.dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/rest/service.php.dist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/application.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/migration.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database/curso" beforeDir="false" afterPath="$PROJECT_DIR$/docs/rest.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database/curso.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database/db/migrations/20181123131836_cursos.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/migrations.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/migrations.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CreateModelsCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreateModelsCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Init.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Init.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PhinxConsole.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PhinxConsole.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/migrations/phinx.php.dist" beforeDir="false" afterPath="$PROJECT_DIR$/templates/migrations/phinx.php.dist" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,59 +48,63 @@
     <session id="-1458848603">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.35" value="1" />
           <entry key="project.open.time.47" value="1" />
+          <entry key="project.open.time.57" value="1" />
           <entry key="project.open.time.74" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="adconsole" value="4" />
           <entry key="console" value="1" />
-          <entry key="dist" value="7" />
-          <entry key="ini" value="1" />
-          <entry key="json" value="2" />
-          <entry key="md" value="4" />
+          <entry key="dist" value="10" />
+          <entry key="ini" value="7" />
+          <entry key="json" value="4" />
+          <entry key="md" value="8" />
           <entry key="path=bin" value="1" />
           <entry key="phinx" value="1" />
-          <entry key="php" value="56" />
+          <entry key="php" value="74" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Ini" value="1" />
-          <entry key="JSON" value="2" />
-          <entry key="Markdown" value="4" />
-          <entry key="PHP" value="60" />
-          <entry key="PLAIN_TEXT" value="10" />
+          <entry key="Ini" value="7" />
+          <entry key="JSON" value="4" />
+          <entry key="Markdown" value="8" />
+          <entry key="PHP" value="78" />
+          <entry key="PLAIN_TEXT" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="adconsole" value="45" />
-          <entry key="dist" value="13" />
-          <entry key="json" value="150" />
-          <entry key="md" value="828" />
-          <entry key="php" value="1337" />
+          <entry key="dist" value="14" />
+          <entry key="dummy" value="1" />
+          <entry key="ini" value="3" />
+          <entry key="json" value="161" />
+          <entry key="md" value="1087" />
+          <entry key="php" value="1860" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="150" />
-          <entry key="Markdown" value="828" />
-          <entry key="PHP" value="1381" />
-          <entry key="PLAIN_TEXT" value="14" />
+          <entry key="Ini" value="3" />
+          <entry key="JSON" value="161" />
+          <entry key="Markdown" value="1087" />
+          <entry key="PHP" value="1904" />
+          <entry key="PLAIN_TEXT" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
         <counts>
-          <entry key="PHP Class.type" value="11" />
+          <entry key="PHP Class.type" value="13" />
         </counts>
       </usages-collector>
     </session>
@@ -92,10 +112,43 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/rest.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="331">
+                <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/rest/service.php.dist">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RestService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="65" column="10" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="62" />
+              <folding>
+                <element signature="e#113#159#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CreateModelsCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1485">
-              <caret line="104" column="57" lean-forward="true" selection-start-line="104" selection-start-column="57" selection-end-line="104" selection-end-column="57" />
+            <state relative-caret-position="182">
+              <caret line="60" column="52" selection-start-line="60" selection-start-column="52" selection-end-line="60" selection-end-column="52" />
               <folding>
                 <element signature="e#111#119#0#PHP" expanded="true" />
               </folding>
@@ -104,25 +157,56 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Create.php">
+        <entry file="file://$PROJECT_DIR$/src/Init.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="36" column="44" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="54" />
+            <state relative-caret-position="800">
+              <caret line="172" selection-start-line="172" selection-end-line="183" selection-end-column="9" />
               <folding>
-                <element signature="e#115#156#0#PHP" expanded="true" />
+                <element signature="e#112#141#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Migrate.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Rest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="27" column="57" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
+            <state relative-caret-position="83">
+              <caret line="33" column="54" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="77" />
               <folding>
-                <element signature="e#115#166#0#PHP" expanded="true" />
+                <element signature="e#114#160#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/rest/rest.php.dist">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1395">
+              <caret line="93" column="37" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/models.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/migrations.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="225">
+                <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -141,13 +225,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/bin/console.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/docs/migrations.md" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/bin/adconsole" />
         <option value="$PROJECT_DIR$/templates/migrations/database.php" />
-        <option value="$PROJECT_DIR$/src/Init.php" />
-        <option value="$PROJECT_DIR$/templates/migrations/phinx.php.dist" />
         <option value="$PROJECT_DIR$/src/AbstractCommand.php" />
         <option value="$PROJECT_DIR$/templates/migrations/Migration.template.php.dist" />
         <option value="$PROJECT_DIR$/src/Rollback.php" />
@@ -156,12 +236,27 @@
         <option value="$PROJECT_DIR$/src/Test.php" />
         <option value="$PROJECT_DIR$/src/SeedCreate.php" />
         <option value="$PROJECT_DIR$/src/SeedRun.php" />
-        <option value="$PROJECT_DIR$/src/PhinxConsole.php" />
         <option value="$PROJECT_DIR$/app/database/db/migrations/20181123131836_cursos.php" />
-        <option value="$PROJECT_DIR$/app/config/application.ini" />
-        <option value="$PROJECT_DIR$/src/CreateModelsCommand.php" />
         <option value="$PROJECT_DIR$/src/Create.php" />
         <option value="$PROJECT_DIR$/src/Migrate.php" />
+        <option value="$PROJECT_DIR$/templates/rest/rest.php" />
+        <option value="$PROJECT_DIR$/app/config/application.ini" />
+        <option value="$PROJECT_DIR$/templates/adconfig.ini" />
+        <option value="$PROJECT_DIR$/src/Init.php" />
+        <option value="$PROJECT_DIR$/app/config/migration.php" />
+        <option value="$PROJECT_DIR$/templates/migrations/phinx.php.dist" />
+        <option value="$PROJECT_DIR$/templates/adconfig.ini.dist" />
+        <option value="$PROJECT_DIR$/templates/rest/rest.ini.dist" />
+        <option value="$PROJECT_DIR$/src/PhinxConsole.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/src/Rest.php" />
+        <option value="$PROJECT_DIR$/app/config/adconfig.ini" />
+        <option value="$PROJECT_DIR$/docs/migrations.md" />
+        <option value="$PROJECT_DIR$/docs/rest.md" />
+        <option value="$PROJECT_DIR$/templates/rest/service.php" />
+        <option value="$PROJECT_DIR$/templates/rest/service.php.dist" />
+        <option value="$PROJECT_DIR$/src/RestService.php" />
+        <option value="$PROJECT_DIR$/src/CreateModelsCommand.php" />
       </list>
     </option>
   </component>
@@ -206,6 +301,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -216,24 +312,17 @@
             <path>
               <item name="adconsole" type="b2602c69:ProjectViewProjectNode" />
               <item name="adconsole" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="adconsole" type="b2602c69:ProjectViewProjectNode" />
-              <item name="adconsole" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="adconsole" type="b2602c69:ProjectViewProjectNode" />
-              <item name="adconsole" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="adconsole" type="b2602c69:ProjectViewProjectNode" />
+              <item name="adconsole" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -276,18 +365,19 @@
       <workItem from="1542482063791" duration="171000" />
       <workItem from="1542649204062" duration="2434000" />
       <workItem from="1542675595298" duration="603000" />
-      <workItem from="1542970568720" duration="8662000" />
+      <workItem from="1542970568720" duration="11658000" />
+      <workItem from="1542988030850" duration="1023000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17731000" />
+    <option name="totallyTimeSpent" value="21750000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29402262" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29886913" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -315,44 +405,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Indev.class.php" />
-    <entry file="file://$PROJECT_DIR$/phinx.php" />
-    <entry file="file://$PROJECT_DIR$/docs/models.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="480">
-            <caret line="32" selection-start-line="32" selection-end-line="32" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/path=bin" />
-    <entry file="file://$PROJECT_DIR$/src/phinx.php" />
-    <entry file="file://$PROJECT_DIR$/vendor/robmorgan/phinx/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="135">
-            <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/robmorgan/phinx/bin/phinx">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -363,16 +415,6 @@
     <entry file="file://$PROJECT_DIR$/vendor/robmorgan/phinx/app/web.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/migrations.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="270">
-            <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/robmorgan/phinx/src/Phinx/Console/PhinxApplication.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -382,13 +424,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/migrations/phinx.json.dist" />
     <entry file="file://$PROJECT_DIR$/templates/migrations/database.php" />
-    <entry file="file://$PROJECT_DIR$/app/config/phinx.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/phinx.php" />
     <entry file="file://$PROJECT_DIR$/vendor/robmorgan/phinx/app/phinx.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -400,9 +436,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="30" selection-start-line="30" selection-end-line="35" selection-end-column="53" />
-          <folding>
-            <element signature="e#1244#1273#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -413,46 +446,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/migrations/phinx.php.dist">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/robmorgan/phinx/src/Phinx/Console/Command/Create.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="314" selection-start-line="29" selection-end-line="314" />
-          <folding>
-            <element signature="e#1244#1285#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Init.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="144" column="84" selection-start-line="144" selection-start-column="42" selection-end-line="144" selection-end-column="84" />
-          <folding>
-            <element signature="e#112#141#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/migrations/Seed.template.php.dist">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/db/migrations/20181123130350_cursos.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/db/migrations/20181123130350_cursos.php" />
     <entry file="file://$PROJECT_DIR$/vendor/robmorgan/phinx/src/Phinx/Console/Command/AbstractCommand.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4648">
           <caret line="356" column="39" selection-start-line="356" selection-start-column="39" selection-end-line="356" selection-end-column="39" />
-          <folding>
-            <element signature="e#1244#1268#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -467,9 +475,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="130" lean-forward="true" selection-start-line="29" selection-end-line="130" />
-          <folding>
-            <element signature="e#1244#1295#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -484,9 +489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="173" lean-forward="true" selection-start-line="29" selection-end-line="173" />
-          <folding>
-            <element signature="e#1244#1295#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -504,9 +506,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="90" lean-forward="true" selection-start-line="29" selection-end-line="90" />
-          <folding>
-            <element signature="e#1244#1295#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -520,23 +519,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Breakpoint.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
-          <folding>
-            <element signature="e#115#166#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/robmorgan/phinx/src/Phinx/Console/Command/Breakpoint.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="98" lean-forward="true" selection-start-line="30" selection-end-line="98" />
-          <folding>
-            <element signature="e#1276#1327#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -554,19 +540,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="110" lean-forward="true" selection-start-line="29" selection-end-line="110" />
-          <folding>
-            <element signature="e#1244#1284#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SeedCreate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="181" lean-forward="true" selection-start-line="181" selection-end-line="181" />
-          <folding>
-            <element signature="e#115#156#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -574,19 +547,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="199" lean-forward="true" selection-start-line="29" selection-end-line="199" />
-          <folding>
-            <element signature="e#1244#1285#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SeedRun.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1390">
-          <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
-          <folding>
-            <element signature="e#115#166#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -594,40 +554,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="124" lean-forward="true" selection-start-line="29" selection-end-line="124" />
-          <folding>
-            <element signature="e#1244#1295#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/migration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-92" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/db/migrations/20181123131836_cursos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/db/migrations/20181123131836_cursos.php" />
     <entry file="file://$PROJECT_DIR$/src/AbstractCommand.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="38" column="56" selection-start-line="38" selection-start-column="56" selection-end-line="38" selection-end-column="56" />
           <folding>
             <element signature="e#113#137#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PhinxConsole.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
-          <folding>
-            <element signature="e#112#154#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -639,39 +575,177 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/application.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CreateModelsCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1485">
-          <caret line="104" column="57" lean-forward="true" selection-start-line="104" selection-start-column="57" selection-end-line="104" selection-end-column="57" />
-          <folding>
-            <element signature="e#111#119#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="36" column="44" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="54" />
-          <folding>
-            <element signature="e#115#156#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Migrate.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
           <caret line="27" column="57" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
           <folding>
             <element signature="e#115#166#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SeedCreate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2542">
+          <caret line="181" selection-start-line="181" selection-end-line="181" />
+          <folding>
+            <element signature="e#115#156#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SeedRun.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1515">
+          <caret line="106" selection-start-line="106" selection-end-line="106" />
+          <folding>
+            <element signature="e#115#166#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Breakpoint.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1001">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+          <folding>
+            <element signature="e#115#166#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/migration.php" />
+    <entry file="file://$PROJECT_DIR$/app/config/application.ini" />
+    <entry file="file://$PROJECT_DIR$/templates/adconfig.ini.dist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/rest/rest.ini.dist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PhinxConsole.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+          <folding>
+            <element signature="e#112#154#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rest.php" />
+    <entry file="file://$PROJECT_DIR$/templates/migrations/phinx.php.dist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/adconfig.ini" />
+    <entry file="file://$PROJECT_DIR$/src/Create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="295" column="2" selection-start-line="294" selection-start-column="8" selection-end-line="295" selection-end-column="2" />
+          <folding>
+            <element signature="e#115#156#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/rest.md">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="331">
+            <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/rest/rest.php.dist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1395">
+          <caret line="93" column="37" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/models.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/migrations.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="225">
+            <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/rest/service.php.dist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RestService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="65" column="10" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="62" />
+          <folding>
+            <element signature="e#113#159#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Rest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="33" column="54" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="77" />
+          <folding>
+            <element signature="e#114#160#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Init.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="172" selection-start-line="172" selection-end-line="183" selection-end-column="9" />
+          <folding>
+            <element signature="e#112#141#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CreateModelsCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="60" column="52" selection-start-line="60" selection-start-column="52" selection-end-line="60" selection-end-column="52" />
+          <folding>
+            <element signature="e#111#119#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

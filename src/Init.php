@@ -146,6 +146,8 @@ class Init  extends Command
         }
 
 
+
+
         if (file_put_contents($path, $contents) === false) {
             throw new RuntimeException(sprintf(
                 'The file "%s" could not be written to',
@@ -166,6 +168,19 @@ class Init  extends Command
         if(!file_exists('app/database/db/seeds')){
             mkdir('app/database/db/seeds',0777,true);
             $output->writeln("<info>created</info> app/database/db/seeds");
+        }
+
+        if(!file_exists('app/config/adconfig.ini')){
+            $contents = file_get_contents(dirname(__FILE__,2).'/templates/adconfig.ini.dist');
+
+            if (file_put_contents('app/config/adconfig.ini', $contents) === false) {
+                throw new RuntimeException(sprintf(
+                    'The file "%s" could not be written to',
+                    'app/config/adconfig.ini'
+                ));
+            }
+
+            $output->writeln("<info>created</info> app/config/adconfig.ini");
         }
     }
 

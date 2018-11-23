@@ -38,7 +38,9 @@
     },
     "require": {
         "symfony/console": "^4.1",
-        "robmorgan/phinx": "^0.10.6"
+        "robmorgan/phinx": "^0.10.6",
+        "rbdwllr/reallysimplejwt": "^1.0",
+        "ext-json": "*"
     },
   "bin": ["bin/adconsole"]
 }
