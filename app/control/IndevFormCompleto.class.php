@@ -22,7 +22,7 @@ class IndevFormCompleto extends TPage
         // create the form fields
         $id       = new TEntry('id');
         $name = new TEntry('name'); 
-	$email = new TEntry('email'); 
+	    $email = new TEntry('email'); 
 	
 
         $id->setEditable(FALSE);
