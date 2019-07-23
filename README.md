@@ -25,10 +25,8 @@ composer require indev/adcconsole:dev-master
 - [x] gerar service 
 
 ### Controllers
-- [ ] Form
-- [ ] QuickForm
-- [ ] BootstrapFormBuilder
-- [ ] StandartForm
+- [x] Form
+- [x] BootstrapFormBuilder(quick)
 
 ### Grids
 - [ ] Grid

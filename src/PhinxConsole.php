@@ -12,7 +12,8 @@ namespace App\Command;
 use Symfony\Component\Console\Application;
 use Phinx\Console\Command;
 use App\Command\CreateModelsCommand;
-
+use App\Command\CreateFormsCommand;
+use App\Command\CreateBootstrapFormCommand;
 
 class PhinxConsole extends Application
 {
@@ -39,7 +40,9 @@ class PhinxConsole extends Application
             new SeedRun(),
             new CreateModelsCommand(),
             new Rest(),
-            new RestService()
+            new RestService(),
+            new CreateFormsCommand(),
+            new CreateBootstrapFormCommand()
         ]);
 
     }
