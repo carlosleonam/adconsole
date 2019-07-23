@@ -44,7 +44,7 @@ class CreateBootstrapFormCommand extends Command
         $path = $input->getOption('path');
         $path = isset($path)?$path.'/':'';
 
-        if(!is_dir($path))
+        if(!is_dir('app/control/'.$path))
           mkdir('app/control/'.$path);
 
         $lines = $this->addAttribute($fields);
@@ -72,7 +72,7 @@ class CreateBootstrapFormCommand extends Command
             $contents = str_replace('$lform',$lform,$contents);
 
 
-            if (file_put_contents('app/control/' . $name . '.class.php', $contents) === false) {
+            if (file_put_contents('app/control/'.$path . $name . '.class.php', $contents) === false) {
                 throw new RuntimeException(sprintf(
                     'The file "%s"  already exists',
                     'app/control/' . $name . 'class.php'

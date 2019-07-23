@@ -44,8 +44,9 @@ class CreateFormsCommand extends Command
         $path = $input->getOption('path');
         $path = !empty($path)?$path.'/':'';
 
-        if(!is_dir($path))
+       if(!is_dir('app/control/'.$path))
           mkdir('app/control/'.$path);
+        
 
 
         $lines = $this->addAttribute($fields);
