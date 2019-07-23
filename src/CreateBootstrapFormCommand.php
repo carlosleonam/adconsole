@@ -23,6 +23,7 @@ class CreateBootstrapFormCommand extends Command
             // the name of the command (the part after "bin/console")
             ->setName('form:create:bootstrap')
             ->addArgument('name',null,'Name for Service')
+            ->addOption('path','p',InputOption::VALUE_OPTIONAL,'path for file')
             ->addOption('model','m',InputOption::VALUE_REQUIRED,'ACTIVE_RECORD used in service ')
             ->addOption('database','d',InputOption::VALUE_REQUIRED,'DataBase used in service ','adconfig')
             ->addOption('fields','f',InputOption::VALUE_OPTIONAL,'add fields')
@@ -40,6 +41,11 @@ class CreateBootstrapFormCommand extends Command
         $model = $input->getOption('model');
         $database = $input->getOption('database');
         $fields = $input->getOption('fields');
+        $path = $input->getOption('path');
+        $path = isset($path)?$path.'/':'';
+
+        if(!is_dir($path))
+          mkdir('app/control/'.$path);
 
         $lines = $this->addAttribute($fields);
 
@@ -47,11 +53,14 @@ class CreateBootstrapFormCommand extends Command
 
 
     
+        
 
         if(empty($model))
             $model= ucfirst($name);
 
-        if (!file_exists('app/control/' . $name . '.class.php')) {
+
+
+        if (!file_exists('app/control/' .$path. $name . '.class.php')) {
             $contents = file_get_contents(dirname(__FILE__, 2) . '/templates/forms/BootstrapFormBuilder.php.dist');
 
             $contents = str_replace('$name',$name,$contents);

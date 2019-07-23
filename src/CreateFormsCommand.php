@@ -23,6 +23,7 @@ class CreateFormsCommand extends Command
             // the name of the command (the part after "bin/console")
             ->setName('form:create')
             ->addArgument('name',null,'Name for Service')
+            ->addOption('path','p',InputOption::VALUE_OPTIONAL,'path for file')
             ->addOption('model','m',InputOption::VALUE_REQUIRED,'ACTIVE_RECORD used in service ')
             ->addOption('database','d',InputOption::VALUE_REQUIRED,'DataBase used in service ','adconfig')
             ->addOption('fields','f',InputOption::VALUE_OPTIONAL,'add fields')
@@ -40,6 +41,12 @@ class CreateFormsCommand extends Command
         $model = $input->getOption('model');
         $database = $input->getOption('database');
         $fields = $input->getOption('fields');
+        $path = $input->getOption('path');
+        $path = !empty($path)?$path.'/':'';
+
+        if(!is_dir($path))
+          mkdir('app/control/'.$path);
+
 
         $lines = $this->addAttribute($fields);
 
@@ -51,7 +58,7 @@ class CreateFormsCommand extends Command
         if(empty($model))
             $model= ucfirst($name);
 
-        if (!file_exists('app/control/' . $name . '.class.php')) {
+        if (!file_exists('app/control/' .$path. $name . '.class.php')) {
             $contents = file_get_contents(dirname(__FILE__, 2) . '/templates/forms/CompleteForm.php.dist');
 
             $contents = str_replace('$name',$name,$contents);
@@ -63,16 +70,16 @@ class CreateFormsCommand extends Command
             $contents = str_replace('$lform',$lform,$contents);
 
 
-            if (file_put_contents('app/control/' . $name . '.class.php', $contents) === false) {
+            if (file_put_contents('app/control/'.$path . $name . '.class.php', $contents) === false) {
                 throw new RuntimeException(sprintf(
                     'The file "%s"  already exists',
                     'app/control/' . $name . 'class.php'
                 ));
             }
 
-            $output->writeln("<info>created</info> app/control/{$name}.class.php'");
+            $output->writeln("<info>created</info> app/control/{$path}/{$name}.class.php'");
         }else{
-             $output->writeln("<info>created</info> app/control/{$name}.class.php já existe");
+             $output->writeln("<info>created</info> app/control/{$path}/{$name}.class.php já existe");
      
         }
 

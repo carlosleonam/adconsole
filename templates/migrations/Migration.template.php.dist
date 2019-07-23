@@ -30,10 +30,15 @@ class $className extends $baseClassName
      * Remember to call "create()" or "update()" and NOT "save()" when working
      * with the Table class.
      */
-    public function create()
+    public function up()
     {
     $table = $this->table('$className');
                   ->create();
+    }
+
+  public function down()
+    {
+        $this->table('$className')->drop()->save();
     }
 
 }
