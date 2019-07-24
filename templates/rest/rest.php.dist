@@ -96,7 +96,8 @@ class HRestServer
 
         $headers = apache_request_headers();
 
-        if(empty($user)  || empty($password)  ){
+
+        if(empty($user)  || empty($password || in_array('Authorization',$headers))  ){
 
             foreach ($headers as $header => $value) {
 
@@ -104,6 +105,9 @@ class HRestServer
 
                     $data = explode(' ',$value);
                     $bearer = strtolower($data[0]);
+
+                    if($data[1] == 'undefined')
+                        return 'token invalida';
 
                     if($bearer === 'bearer'){
 

@@ -42,7 +42,7 @@ class RestService extends Command
         if(empty($model))
             $model= ucfirst($name);
 
-        if (!file_exists('app/service/' . $name . '.class.php')) {
+        if (!file_exists('app/service/' . $name . 'Service.class.php')) {
             $contents = file_get_contents(dirname(__FILE__, 2) . '/templates/rest/service.php.dist');
 
             $contents = str_replace('$class',$name.'Service',$contents);
@@ -50,7 +50,7 @@ class RestService extends Command
             $contents = str_replace('$database',$database,$contents);
 
 
-            if (file_put_contents('app/service/' . $name . '.class.php', $contents) === false) {
+            if (file_put_contents('app/service/' . $name . 'Service.class.php', $contents) === false) {
                 throw new RuntimeException(sprintf(
                     'The file "%s"  already exists',
                     'app/service/' . $name . 'class.php'
