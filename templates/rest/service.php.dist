@@ -10,4 +10,8 @@ class $class extends AdiantiRecordService
 {
     const DATABASE      = '$database';
     const ACTIVE_RECORD = '$model';
+
+     public function handle($params){
+     return json_encode(parent::handle($params));
+ }
 }
