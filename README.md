@@ -1,4 +1,4 @@
-# ADconsole
+# ADconsole 1.0
 
 linha de comando para gerar codigos, no adcommunity edition.
 
