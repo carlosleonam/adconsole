@@ -1,7 +1,9 @@
 <?php
 /**
  * BootstrapFormBuilder
- * @author     Alexandre E Souza
+* generate by adconsole 1.0.0
+ * @author: Indev Web www.dein.net.br
+ * @mail team@indev.net.b
  */
 class $name extends TPage
 {

@@ -27,6 +27,7 @@ class CreateFormsCommand extends Command
             ->addOption('database','d',InputOption::VALUE_REQUIRED,'DataBase used in service ','adconfig')
             ->addOption('fields','f',InputOption::VALUE_OPTIONAL,'add fields')
             // the short description shown while running "php bin/console list"
+            ->addOption('path','p',InputOption::VALUE_OPTIONAL,'patch for model')
             ->setDescription('generate BootFormBuilder class')
             // the full command description shown when running the command with
             // the "--help" option

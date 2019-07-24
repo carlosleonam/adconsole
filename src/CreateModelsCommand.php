@@ -29,13 +29,13 @@ class CreateModelsCommand extends Command
             ->addArgument('name',null,'Name for Model')
           //  ->addArgument('fields',null,'List of fiends')
             ->addOption('fields','f',InputOption::VALUE_OPTIONAL,'add fields')
-            ->addOption('primary-key','p',InputOption::VALUE_OPTIONAL,'primary key')
+            ->addOption('primary-key','k',InputOption::VALUE_OPTIONAL,'primary key')
             ->addOption('assosiacao','s',InputOption::VALUE_OPTIONAL,'add assosiacao')
             ->addOption('composition','c',InputOption::VALUE_OPTIONAL,'add composition')
             ->addOption('aggregate','a',InputOption::VALUE_OPTIONAL,'add agreggation')
             ->addOption('pivot',null,InputOption::VALUE_OPTIONAL,'pivot record')
             ->addOption('idpolicy','i',InputOption::VALUE_OPTIONAL,'IDPOLICY')
-            ->addOption('patch',null,InputOption::VALUE_OPTIONAL,'patch for model')
+            ->addOption('path','p',InputOption::VALUE_OPTIONAL,'patch for model')
             ->addOption('rest','r',InputOption::VALUE_OPTIONAL,'çreate rest service')
 
             // the full command description shown when running the command with

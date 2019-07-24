@@ -1,4 +1,6 @@
 <?php
+header("Access-Control-Allow-Origin: *");
+
 // initialization script
 require_once 'init.php';
 
@@ -96,7 +98,14 @@ class HRestServer
 
         $headers = apache_request_headers();
 
+        
+
         if(empty($user)  || empty($password)  ){
+            
+            if (!array_key_exists('Authorization', $headers)) {
+                return 'token invalida';
+            }
+
 
             foreach ($headers as $header => $value) {
 
@@ -104,6 +113,9 @@ class HRestServer
 
                     $data = explode(' ',$value);
                     $bearer = strtolower($data[0]);
+
+                    if($data[1] == 'undefined')
+                        return 'token invalida';
 
                     if($bearer === 'bearer'){
 

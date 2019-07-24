@@ -1,6 +1,6 @@
 <?php
 /**
- * generate by adconsole 0.1
+ * generate by adconsole 1.0.0
  * @author: Indev Web www.dein.net.br
  * @mail team@indev.net.br
  */
