@@ -96,11 +96,11 @@ class HRestServer
 
         $headers = apache_request_headers();
 
-            if(!isset($headers['Authorization'])){
-                return "header Authorization not found";
-            }
+         if (empty($user)  AND empty($password) AND !isset($headers['Authorization'])) {
+             return "Authorization not found ";
+         }
 
-        if(empty($user)  || empty($password || in_array('Authorization',$headers))  ){
+        if(empty($user)  || empty($password) || isset($headers['Authorization'])   ){
 
             foreach ($headers as $header => $value) {
 
