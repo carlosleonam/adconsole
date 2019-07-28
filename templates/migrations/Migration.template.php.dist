@@ -32,7 +32,7 @@ class $className extends $baseClassName
      */
     public function up()
     {
-    $table = $this->table('$className');
+   $this->table('$className')
                   ->create();
     }
 
