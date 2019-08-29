@@ -28,7 +28,7 @@ class Init  extends Command
     {
 
 
-        $this->setName($this->getName() ?: 'init')
+        $this->setName('init')
             ->setDescription('Initialize the application for Phinx')
             ->addOption('--format', '-f', InputArgument::OPTIONAL, 'What format should we use to initialize?', 'php')
             ->addArgument('path', InputArgument::OPTIONAL, 'Which path should we initialize for AdConsole?','app/config')
