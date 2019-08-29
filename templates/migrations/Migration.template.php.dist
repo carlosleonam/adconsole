@@ -27,13 +27,25 @@ class $className extends $baseClassName
      * Any other destructive changes will result in an error when trying to
      * rollback the migration.
      *
-     * Remember to call "create()" or "update()" and NOT "save()" when working
-     * with the Table class.
+
+
+      /**
+     * Migrate Up.
      */
-    public function create()
+    public function up()
     {
-    $table = $this->table('$className');
+       $this->table('$className')
                   ->create();
+
     }
+
+    /**
+     * Migrate Down.
+     */
+    public function down()
+    {
+             $this->table('$className')->drop()->save();
+    }
+
 
 }

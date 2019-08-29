@@ -35,7 +35,7 @@ class CreateModelsCommand extends Command
             ->addOption('aggregate','a',InputOption::VALUE_OPTIONAL,'add agreggation')
             ->addOption('pivot',null,InputOption::VALUE_OPTIONAL,'pivot record')
             ->addOption('idpolicy','i',InputOption::VALUE_OPTIONAL,'IDPOLICY')
-            ->addOption('path','p',InputOption::VALUE_OPTIONAL,'patch for model')
+            ->addOption('path','p',InputOption::VALUE_OPTIONAL,'path for model')
             ->addOption('rest','r',InputOption::VALUE_OPTIONAL,'çreate rest service')
 
             // the full command description shown when running the command with
@@ -50,7 +50,7 @@ class CreateModelsCommand extends Command
         $fields = $input->getOption('fields');
         $key = $input->getOption('primary-key');
         $idpolicy = $input->getOption('idpolicy');
-        $ipatch =  $input->getOption('patch');
+        $ipatch =  $input->getOption('path');
         $assosiacao =  $input->getOption('assosiacao');
         $composition =  $input->getOption('composition');
         $aggregate = $input->getOption('aggregate');
