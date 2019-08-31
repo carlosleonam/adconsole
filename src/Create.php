@@ -34,7 +34,7 @@ class Create extends AbstractCommand
     {
         parent::configure();
 
-        $this->setName($this->getName() ?: 'migration:create')
+        $this->setName('migration:create')
             ->setDescription('Create a new migration')
             ->addArgument('name', InputArgument::REQUIRED, 'What is the name of the migration (in CamelCase)?')
             ->setHelp(sprintf(
