@@ -107,13 +107,13 @@ if(!empty($assosiacao)) {
         $assosiacao = is_array($assosiacao) ? $assosiacao : explode(',', $assosiacao);
         $lines .= $this->addAttribute($assosiacao, 'id');
         foreach ($assosiacao as $ass) {
-            $asslines .= "private $".$ass."; \n\t";
+            $asslines .= "private $".strtolower($ass)."; \n\t";
 
         }
 
     } else {
-        $asslines .= "private $".$assosiacao."; \n\t";
-        $lines .= $this->addAttribute($assosiacao, 'id');
+        $asslines .= "private $".strtolower($assosiacao)."; \n\t";
+        $lines .= $this->addAttribute(strtolower($assosiacao), 'id');
     }
 
 
@@ -330,7 +330,7 @@ if(!empty($assosiacao)) {
 
                 foreach ($fields as $field) {
                     if(!empty($prefix))
-                          $field = $field.'_'.$prefix;
+                          $field = strtolower($field).'_'.$prefix;
 
                     $lines .= "parent::addAttribute('$field'); \n\t";
 
@@ -339,7 +339,7 @@ if(!empty($assosiacao)) {
 
             }else{
                 if(!empty($prefix))
-                    $fields = $fields.'_'.$prefix;
+                    $fields = strtolower($fields).'_'.$prefix;
 
                 $lines .= "parent::addAttribute('$fields'); \n\t";
             }
