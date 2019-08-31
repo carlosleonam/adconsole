@@ -1,7 +1,8 @@
 #!/usr/bin/env php
 <?php
 
-require __DIR__.'/vendor/autoload.php';
+
+require dirname(__DIR__)."/vendor/autoload.php"; // vindo da raiz do projeto.
 
 use App\Command\PhinxConsole;
 use App\Command\CreateModelsCommand;
