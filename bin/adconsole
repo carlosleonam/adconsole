@@ -2,7 +2,7 @@
 <?php
 
 
-require "/vendor/autoload.php"; // vindo da raiz do projeto.
+require dirname(__DIR__)."/autoload.php"; // vindo da raiz do projeto.
 
 use App\Command\PhinxConsole;
 use App\Command\CreateModelsCommand;
