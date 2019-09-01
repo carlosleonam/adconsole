@@ -1,5 +1,15 @@
 #!/usr/bin/env php
 <?php
 
-$app = require __DIR__ . '/../command/app.php';
-$app->run();
+
+require dirname(__DIR__)."/vendor/autoload.php"; // vindo da raiz do projeto.
+
+use App\Command\PhinxConsole;
+use App\Command\CreateModelsCommand;
+
+
+
+$application = new PhinxConsole();
+
+
+$application->run();
