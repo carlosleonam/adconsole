@@ -5,6 +5,8 @@ linha de comando para gerar codigos, no adcommunity edition.
 Foco do nosso projeto é facilitar a criação de codigos que são rotineiros,
 como models, listagens , formularios entre outros
 
+ para utlizar no windows utilize o [Gitbash](https://gitforwindows.org)
+
 ## Instalação
 
 composer require indev/adcconsole:dev-master
