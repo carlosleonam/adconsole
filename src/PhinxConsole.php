@@ -27,7 +27,7 @@ class PhinxConsole extends Application
             $version = $composerConfig->version;
         }
 
-        parent::__construct('Phinx  - https://phinx.org.', $version);
+        parent::__construct('AdConsole  - https://github.com/devalexandre/adconsole.', $version);
         $this->addCommands([
             new Init(),
             new Create(),
