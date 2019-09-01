@@ -5,8 +5,8 @@
     "license": "Apache-2.0",
     "version": "1.0.1",
     "scripts": {
-            "post-autoload-dump": [
-             "php -r \"copy('bin/adconsole', '/adconsole');\""
+            "post-root-package-install": [
+             "@php -r \"copy('bin/adconsole', 'adconsole');\""
             ]
     },
     "authors": [
@@ -37,6 +37,5 @@
         "robmorgan/phinx": "^0.10.6",
         "rbdwllr/reallysimplejwt": "^1.0",
         "ext-json": "*"
-    },
-  "bin": ["bin/adconsole"]
+    }
 }
