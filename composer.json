@@ -35,8 +35,6 @@
         "rbdwllr/reallysimplejwt": "^1.0",
         "ext-json": "*"
     },
-    "bin": [
-        "bin/adconsole",
-        "bin/adconsole.bat"
-    ]
+    "bin": ["bin/adconsole",
+		"bin/adconsole.bat"]
 }
